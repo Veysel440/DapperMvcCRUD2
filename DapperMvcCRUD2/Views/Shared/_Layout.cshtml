@@ -1,0 +1,198 @@
+﻿
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Weblog a Blogging Category Bootstrap responsive WebTemplate | Blog3 :: w3layouts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Veyselin sayfası" />
+
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <link href="~/Content/web/css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="~/Content/web/css/single.css">
+    <link href="~/Content/web/css/style.css" rel='stylesheet' type='text/css' />
+    <link href="~/Content/web/css/fontawesome-all.css" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800"
+          rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="top-bar_sub_w3layouts container-fluid">
+            <div class="row">
+                <div class="col-md-4 logo text-left">
+                    <a class="navbar-brand" href="index.html">
+                        <i class="fab fa-linode"></i> Weblog
+                    </a>
+                </div>
+                <div class="col-md-4 top-forms text-center mt-lg-3 mt-md-1 mt-0">
+                    <span>Hoşgeldiniz</span>
+                </div>
+                <div class="col-md-4 log-icons text-right">
+                </div>
+            </div>
+        </div>
+
+        <div class="header_top" id="home">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <button class="navbar-toggler navbar-toggler-right mx-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                               aria-expanded="false">
+                                Menü
+                                <span class="sr-only">(current)</span>
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#"></a>
+                                <a class="dropdown-item" href="../Personel/Index">Personel Listesi</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="../Personel/AddOrEdit">Personel Ekle</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="../bolum/Index">Bolum Listesi</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="../bolum/AddOrEdit">Bolum Ekle</a>
+                            </div>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <script src="~/Content/web/js/jquery-2.2.3.min.js"></script>
+
+    <script src="~/Content/web/js/move-top.js"></script>
+    <script src="~/Content/web/js/easing.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 900);
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            /*
+                                    var defaults = {
+                                            containerID: 'toTop', // fading element id
+                                        containerHoverID: 'toTopHover', // fading element hover id
+                                        scrollSpeed: 1200,
+                                        easingType: 'linear'
+                                        };
+                                    */
+
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
+
+        });
+    </script>
+    <a href="#home" class="scroll" id="toTop" style="display: block;">
+        <span id="toTopHover" style="opacity: 1;"> </span>
+    </a>
+
+    <script src="~/Content/web/js/bootstrap.js"></script>
+</body>
+
+</html>
+
+@RenderBody()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>@ViewBag.Title - My ASP.NET Application</title>
+        <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+        <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <script src="~/Scripts/modernizr-2.8.3.js"></script>
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Proje", "Menu", "Personel", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>
+        </div>
+
+        <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+    </body>
+    </html>*@

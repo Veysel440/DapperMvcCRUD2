@@ -1,0 +1,40 @@
+﻿@model IEnumerable<DapperMvcCRUD2.Models.SectionModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Bölüm Listesi</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Ekle")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SectionID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SectionID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+
+        <td>
+            @Html.ActionLink("Edit", "Ekle", new {  id=item.SectionID }) |
+            @Html.ActionLink("Delete", "Sil", new {  id=item.SectionID })
+        </td>
+    </tr>
+}
+
+</table>

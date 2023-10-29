@@ -1,0 +1,80 @@
+﻿@model IEnumerable<DapperMvcCRUD2.Models.PersonelModel>
+
+
+@{
+    ViewBag.Title = "Index";
+
+}
+
+<h2>Personel Listesi</h2>
+
+<p>
+    @Html.ActionLink("Create New", "AddOrEdit", null, new { @class = "btn btn-success" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Ad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Soyad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DoğumTarihi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BolumAd)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Soyad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DoğumTarihi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BolumAd)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "AddOrEdit", new { id = item.PersonelID }, new { @class = "btn btn-primary" }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.PersonelID }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+</table>
+
+<style>
+    a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    table, th, td {
+        border: 1px solid #ddd;
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
