@@ -20,6 +20,7 @@ namespace DapperMvcCRUD2.Controllers
             //return View(DapperORM.ReturnList<PersonelModel>("PersonelViewAll"));
             List<PersonelModel> personelList = (List<PersonelModel>)DapperORM.ReturnList<PersonelModel>("PersonelViewAll");
             //test
+            //test 2
             return View(personelList);
         }
         [HttpGet]
