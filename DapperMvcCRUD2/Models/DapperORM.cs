@@ -25,7 +25,7 @@ namespace DapperMvcCRUD2.Models
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 con.Open();
-                return (T)Convert.ChangeType(con.ExecuteScalar(procedureName, param, commandType: CommandType.StoredProcedure), typeof(T)); ;
+                return (T)Convert.ChangeType(con.ExecuteScalar(procedureName, param, commandType: CommandType.StoredProcedure), typeof(T)); 
             }
         }
         public static IEnumerable<T> ReturnList<T>(string procedureName, DynamicParameters param = null)

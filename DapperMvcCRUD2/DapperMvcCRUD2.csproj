@@ -316,6 +316,7 @@
     <Compile Include="Models\SectionModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\WebApiHelper.cs" />
+    <Compile Include="Services\WebApiHelper2.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
